@@ -1,6 +1,6 @@
-# Chu Hiu Lung — CV
+# Chu Hiu Lung — CV & CPD Hub
 
-Online CV for **Chu Hiu Lung**.
-
-- Site: https://hiulungchu-art.github.io/cv/
-- CPD log & certificates: Google Drive folder `CV-CPD` (linked from the CPD section on the page)
+- Hub: https://hiulungchu-art.github.io/cv/
+- CV: https://hiulungchu-art.github.io/cv/cv.html
+- CPD Log Book: https://hiulungchu-art.github.io/cv/cpd-log.html
+- Google Sheet (master Excel): linked from the hub / log book
