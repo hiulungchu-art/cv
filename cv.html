@@ -20,20 +20,33 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             padding: 40px 50px;
         }
+        @page {
+            size: A4;
+            margin: 12mm 14mm;
+        }
         @media print {
-            body {
-                background-color: white;
-                margin: 0;
-                padding: 0;
+            html, body {
+                background-color: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
             .cv-container {
-                width: 100%;
-                margin: 0;
-                box-shadow: none;
-                padding: 20px 40px;
+                width: 100% !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                padding: 0 !important;
             }
+            .section-title {
+                margin-top: 1.25rem;
+                margin-bottom: 0.75rem;
+                padding-bottom: 0.35rem;
+            }
+            header.mb-8 { margin-bottom: 1.25rem !important; }
+            .mb-6 { margin-bottom: 1rem !important; }
+            ul.bullet-list li { margin-bottom: 0.25rem; }
         }
         .section-title {
             color: #111827;
