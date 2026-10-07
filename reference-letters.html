@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chu Hiu Lung — Reference Letters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body{font-family:Inter,system-ui,sans-serif}</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+  <div class="max-w-5xl mx-auto px-4 py-10">
+    <a href="./" class="text-sm text-blue-700 hover:underline">← Hub</a>
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl font-bold text-slate-900">Reference Letters</h1>
+      <p class="mt-2 text-slate-600">Chu Hiu Lung · Work references for HKIE / professional pathways</p>
+      <p class="mt-3 text-sm rounded-lg bg-amber-50 border border-amber-200 text-amber-900 px-3 py-2">
+        <strong>Evidence required:</strong> every reference entry must have a saved letter (PDF). Links below open the proof file.
+      </p>
+      <p class="mt-3 text-sm text-slate-600">
+        Master CSV:
+        <a class="text-blue-700 underline" href="./Chu-Hiu-Lung-Reference-Letters.csv">Chu-Hiu-Lung-Reference-Letters.csv</a>
+        ·
+        <a class="text-blue-700 underline" href="https://drive.google.com/drive/folders/10ZkoRtlMxOaXswWd1Sv5TdezSyN2mvre" target="_blank" rel="noopener">Letters folder (Drive)</a>
+      </p>
+    </header>
+
+    <!-- Working experience summary -->
+    <section class="mb-8 rounded-xl border border-slate-200 bg-white shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-slate-900">Working experience summary</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Calculated from CV employment dates only (Chubb + PolyU).
+        <strong>Present = 2026-10-07 (HKT)</strong>. No other roles included.
+      </p>
+      <div class="mt-4 grid sm:grid-cols-3 gap-4">
+        <div class="rounded-lg bg-blue-50 border border-blue-100 px-4 py-3">
+          <div class="text-xs font-semibold uppercase tracking-wide text-blue-700">Total (continuous)</div>
+          <div class="mt-1 text-2xl font-bold text-slate-900">2 yr 5 mo</div>
+          <div class="text-sm text-slate-600">29.2 months · 2.44 years</div>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+          <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Chubb</div>
+          <div class="mt-1 text-xl font-semibold text-slate-900">1 yr 2 mo</div>
+          <div class="text-sm text-slate-600">May 2024 – Jun 2025 · 14.0 mo</div>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+          <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">PolyU</div>
+          <div class="mt-1 text-xl font-semibold text-slate-900">1 yr 3 mo</div>
+          <div class="text-sm text-slate-600">Jul 2025 – Present · 15.2 mo</div>
+        </div>
+      </div>
+      <div class="mt-4 overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-left text-slate-700 border-b border-slate-200">
+            <tr>
+              <th class="py-2 pr-4 font-semibold">Employer</th>
+              <th class="py-2 pr-4 font-semibold">Role</th>
+              <th class="py-2 pr-4 font-semibold">Period (CV)</th>
+              <th class="py-2 font-semibold">Duration</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="py-2 pr-4">Chubb Hong Kong Limited</td>
+              <td class="py-2 pr-4">Assistant Engineer (Fire Service)</td>
+              <td class="py-2 pr-4 whitespace-nowrap">2024-05-01 – 2025-06-30</td>
+              <td class="py-2">1y 2m (426 days)</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4">The Hong Kong Polytechnic University (PolyU)</td>
+              <td class="py-2 pr-4">Assistant Facilities Officer (Fire Services)</td>
+              <td class="py-2 pr-4 whitespace-nowrap">2025-07-01 – 2026-10-07 (Present)</td>
+              <td class="py-2">1y 3m 7d (464 days)</td>
+            </tr>
+            <tr class="font-medium">
+              <td class="py-2 pr-4" colspan="2">Total (continuous May 2024 → Present)</td>
+              <td class="py-2 pr-4 whitespace-nowrap">2024-05-01 – 2026-10-07</td>
+              <td class="py-2">2y 5m 7d (890 days)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-slate-500">
+        Formula: day-inclusive span with <code>relativedelta</code> (end+1day − start).
+        Chubb and PolyU abut (Jun 2025 → Jul 2025) so total = continuous from Chubb start to Present.
+        Month totals use average month length 30.436875 days (365.25/12). Calculation date: 2026-10-07 HKT.
+      </p>
+    </section>
+
+    <h2 class="text-lg font-semibold text-slate-900 mb-3">Stored reference letters</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+      <table class="min-w-full text-sm">
+        <thead class="bg-slate-100 text-left text-slate-700">
+          <tr>
+            <th class="px-4 py-3 font-semibold">Date</th>
+            <th class="px-4 py-3 font-semibold">Employer</th>
+            <th class="px-4 py-3 font-semibold">Referee</th>
+            <th class="px-4 py-3 font-semibold">Role covered</th>
+            <th class="px-4 py-3 font-semibold">Period covered</th>
+            <th class="px-4 py-3 font-semibold">Evidence</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr>
+            <td class="px-4 py-3 whitespace-nowrap">2025-05-23</td>
+            <td class="px-4 py-3">Chubb Hong Kong Limited</td>
+            <td class="px-4 py-3">Tammy Chu, Manager</td>
+            <td class="px-4 py-3">Assistant Engineer (Fire Service)</td>
+            <td class="px-4 py-3 whitespace-nowrap">13 May 2024 – 23 May 2025</td>
+            <td class="px-4 py-3 space-x-2 whitespace-nowrap">
+              <a class="text-blue-700 underline font-medium" href="./reference-letters/2025-05-23_Chubb_Reference-Letter_Chu-Hiu-Lung.pdf" target="_blank" rel="noopener">Open PDF</a>
+              <span class="text-slate-400">·</span>
+              <a class="text-slate-600 underline" href="https://drive.google.com/file/d/1RW3C6dEJxXolI0PVTGyQe5Eukf_g7Fj8/view" target="_blank" rel="noopener">Drive</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-6 text-sm text-slate-500">Letter PDFs are stored on this site under <code>reference-letters/</code> and mirrored in Google Drive. Experience totals above follow the CV; the Chubb letter period (to 23 May 2025) is shown in the evidence table as stated by the referee.</p>
+    <p class="mt-2"><a class="text-blue-700 underline" href="./cv.html">Open CV</a> · <a class="text-blue-700 underline" href="./cpd-log.html">CPD Log Book</a></p>
+  </div>
+</body>
+</html>
