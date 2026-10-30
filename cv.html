@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV of Chu Hiu Lung, Assistant Facilities Officer (Fire Services) at PolyU. BEng in Structural and Fire Safety Engineering.">
     <title>Chu Hiu Lung - CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +47,87 @@
             }
             header.mb-8 { margin-bottom: 1.25rem !important; }
             .mb-6 { margin-bottom: 1rem !important; }
-            ul.bullet-list li { margin-bottom: 0.25rem; }
+            ul.bullet-list li {
+                margin-bottom: 0.2rem;
+                line-height: 1.45;
+                break-inside: avoid;
+            }
+            h2.section-title, h3 { break-after: avoid; }
+            .skills-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                column-gap: 1.25rem !important;
+            }
+            .screen-tools { display: none !important; }
+            header a { text-decoration: none !important; }
+        }
+        header a {
+            color: inherit;
+            text-decoration: none;
+        }
+        header a:hover { text-decoration: underline; }
+        .screen-tools {
+            width: min(210mm, calc(100% - 2rem));
+            margin: 1rem auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem 1.15rem;
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 0.875rem;
+        }
+        .screen-tools a { color: #1d4ed8; text-decoration: none; }
+        .screen-tools a:hover { text-decoration: underline; }
+        .screen-tools button {
+            margin-left: auto;
+            background: #1e3a8a;
+            color: white;
+            border: 0;
+            border-radius: 9999px;
+            padding: 0.4rem 0.95rem;
+            font: inherit;
+            cursor: pointer;
+        }
+        .screen-tools button:hover { background: #1e40af; }
+        .screen-tools button:focus-visible,
+        .screen-tools a:focus-visible,
+        header a:focus-visible {
+            outline: 2px solid #1d4ed8;
+            outline-offset: 2px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media screen and (min-width: 720px) {
+            .skills-grid { grid-template-columns: 1fr 1fr; column-gap: 1.5rem; }
+        }
+        @media screen {
+            .cv-container { width: min(210mm, calc(100% - 2rem)); }
+        }
+        @media screen and (max-width: 720px) {
+            body { background-color: #fff; }
+            .cv-container {
+                width: 100%;
+                min-height: 0;
+                margin: 0;
+                padding: 1.25rem 1rem 2.5rem;
+                box-shadow: none;
+            }
+            .cv-container h1 { font-size: 1.875rem; }
+            .screen-tools {
+                width: auto;
+                margin: 0;
+                padding: 0.75rem 1rem;
+                background: #f8fafc;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .role-line {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.15rem !important;
+            }
         }
         .section-title {
             color: #111827;
@@ -81,39 +162,41 @@
 </head>
 <body class="antialiased">
 
+    <div class="screen-tools">
+        <a href="./">← Hub</a>
+        <a href="./cpd-log.html">CPD log</a>
+        <a href="./reference-letters.html">Reference letters</a>
+        <button type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
     <div class="cv-container">
         <!-- Header -->
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold text-gray-900 mb-3">Chu Hiu Lung</h1>
             <div class="text-sm text-gray-600 flex justify-center items-center gap-4 flex-wrap">
-                <span class="flex items-center gap-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <a class="flex items-center gap-1" href="tel:+85262108601">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     62108601
-                </span>
-                <span>|</span>
-                <span class="flex items-center gap-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </a>
+                <span aria-hidden="true">|</span>
+                <a class="flex items-center gap-1" href="mailto:hiulungchu@gmail.com">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     hiulungchu@gmail.com
-                </span>
+                </a>
             </div>
         </header>
 
         <!-- Education Section -->
         <div>
             <h2 class="section-title">Education & Qualifications</h2>
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="font-semibold text-gray-900">The Hong Kong Polytechnic University</h3>
-                    <span class="text-sm font-medium text-gray-500">Sep 2026 – Present</span>
-                </div>
+            <h3 class="font-semibold text-gray-900">The Hong Kong Polytechnic University</h3>
+            <div class="role-line flex justify-between items-baseline gap-3 mt-2 mb-1">
                 <p class="text-gray-700 font-medium text-sm">MSc in Fire and Safety Engineering (Part-time)</p>
+                <span class="text-sm font-medium text-gray-500 whitespace-nowrap">Sep 2026 – Present</span>
             </div>
-            <div>
-                <div class="flex justify-between items-baseline mb-1">
-                    <h3 class="font-semibold text-gray-900">The Hong Kong Polytechnic University</h3>
-                    <span class="text-sm font-medium text-gray-500">2020 – 2024</span>
-                </div>
+            <div class="role-line flex justify-between items-baseline gap-3">
                 <p class="text-gray-700 font-medium text-sm">BEng (Hons) in Structural and Fire Safety Engineering</p>
+                <span class="text-sm font-medium text-gray-500 whitespace-nowrap">2020 – 2024</span>
             </div>
         </div>
 
@@ -123,9 +206,9 @@
 
             <!-- PolyU Experience (New from Appraisal) -->
             <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
+                <div class="role-line flex justify-between items-baseline gap-3 mb-1">
                     <h3 class="font-semibold text-gray-900">The Hong Kong Polytechnic University (PolyU)</h3>
-                    <span class="text-sm font-medium text-gray-500">May 2025 – Present</span>
+                    <span class="text-sm font-medium text-gray-500 whitespace-nowrap">May 2025 – Present</span>
                 </div>
                 <p class="text-gray-700 italic text-sm mb-2">Assistant Facilities Officer (Fire Services)</p>
                 <ul class="bullet-list text-sm">
@@ -139,9 +222,9 @@
 
             <!-- Chubb Experience (Condensed) -->
             <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
+                <div class="role-line flex justify-between items-baseline gap-3 mb-1">
                     <h3 class="font-semibold text-gray-900">Chubb Hong Kong Limited</h3>
-                    <span class="text-sm font-medium text-gray-500">May 2024 – May 2025</span>
+                    <span class="text-sm font-medium text-gray-500 whitespace-nowrap">May 2024 – May 2025</span>
                 </div>
                 <p class="text-gray-700 italic text-sm mb-2">Assistant Engineer (Fire Service)</p>
                 <ul class="bullet-list text-sm">
@@ -154,9 +237,9 @@
 
             <!-- Fugro Experience -->
             <div class="mb-6">
-                <div class="flex justify-between items-baseline mb-1">
+                <div class="role-line flex justify-between items-baseline gap-3 mb-1">
                     <h3 class="font-semibold text-gray-900">Fugro (Hong Kong) Limited</h3>
-                    <span class="text-sm font-medium text-gray-500">Jul 2023 – Aug 2023</span>
+                    <span class="text-sm font-medium text-gray-500 whitespace-nowrap">Jul 2023 – Aug 2023</span>
                 </div>
                 <p class="text-gray-700 italic text-sm mb-2">Summer Intern</p>
                 <ul class="bullet-list text-sm">
@@ -168,9 +251,9 @@
 
             <!-- Castco Experience -->
             <div>
-                <div class="flex justify-between items-baseline mb-1">
+                <div class="role-line flex justify-between items-baseline gap-3 mb-1">
                     <h3 class="font-semibold text-gray-900">Castco Testing Centre Limited</h3>
-                    <span class="text-sm font-medium text-gray-500">May 2023 – Jun 2023</span>
+                    <span class="text-sm font-medium text-gray-500 whitespace-nowrap">May 2023 – Jun 2023</span>
                 </div>
                 <p class="text-gray-700 italic text-sm mb-2">Summer Intern</p>
                 <ul class="bullet-list text-sm">
@@ -186,7 +269,7 @@
         <!-- Skills & Qualifications Section -->
         <div>
             <h2 class="section-title">Skills & Professional Qualifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div class="skills-grid text-sm text-gray-700">
                 <div>
                     <h3 class="font-semibold text-gray-900 mb-2">Computer Skills</h3>
                     <ul class="bullet-list">
@@ -208,7 +291,7 @@
             <div class="mt-4 text-sm text-gray-700">
                 <h3 class="font-semibold text-gray-900 mb-2">Certifications</h3>
                 <ul class="bullet-list">
-                    <li>普通話水平測試 (PSC) - Score: B2 (PolyU Chinese Language Centre, Jan 2023)</li>
+                    <li><span lang="zh-Hant">普通話水平測試</span> (PSC) - Score: B2 (PolyU Chinese Language Centre, Jan 2023)</li>
                 </ul>
             </div>
         </div>
