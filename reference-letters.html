@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Work reference letters and employed experience tally for Chu Hiu Lung." />
   <title>Chu Hiu Lung — Reference Letters</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>body{font-family:Inter,system-ui,sans-serif}</style>
+  <link href="./site.css" rel="stylesheet">
+  <style>
+    body{font-family:Inter,system-ui,sans-serif}
+    @media print {
+      body { background: #fff !important; }
+      .shadow-sm { box-shadow: none !important; }
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
   <div class="max-w-5xl mx-auto px-4 py-10">
-    <a href="./" class="text-sm text-blue-700 hover:underline">← Hub</a>
+    <nav class="text-sm flex flex-wrap items-center gap-x-3 gap-y-1" aria-label="Site">
+      <a class="text-blue-700 hover:underline" href="./">Hub</a>
+      <span class="text-slate-300" aria-hidden="true">/</span>
+      <a class="text-slate-600 hover:underline" href="./cv.html">CV</a>
+      <span class="text-slate-300" aria-hidden="true">/</span>
+      <a class="text-slate-600 hover:underline" href="./cpd-log.html">CPD log</a>
+      <span class="text-slate-300" aria-hidden="true">/</span>
+      <a class="font-semibold text-slate-900" href="./reference-letters.html" aria-current="page">Reference letters</a>
+    </nav>
     <header class="mt-4 mb-8">
       <h1 class="text-3xl font-bold text-slate-900">Reference Letters</h1>
       <p class="mt-2 text-slate-600">Chu Hiu Lung · Work references for HKIE / professional pathways</p>
@@ -31,13 +47,13 @@
       <p class="mt-2 text-sm text-slate-600">
         Calculated from exact handover dates (Chubb letter end + PolyU start after weekend).
         CV month-year display: Chubb <strong>May 2024 – May 2025</strong>; PolyU <strong>May 2025 – Present</strong>.
-        <strong>Present = 2026-10-07 (HKT)</strong>. No other roles included.
+        <strong>Present = <span id="exp-present">2026-10-30 (HKT)</span></strong>. No other roles included.
       </p>
       <div class="mt-4 grid sm:grid-cols-3 gap-4">
         <div class="rounded-lg bg-blue-50 border border-blue-100 px-4 py-3">
           <div class="text-xs font-semibold uppercase tracking-wide text-blue-700">Total (employed)</div>
-          <div class="mt-1 text-2xl font-bold text-slate-900">2 yr 4 mo</div>
-          <div class="text-sm text-slate-600">28.8 months · 2.40 years</div>
+          <div id="exp-total-ym" class="mt-1 text-2xl font-bold text-slate-900">2 yr 5 mo</div>
+          <div id="exp-total-detail" class="text-sm text-slate-600">29.5 months · 2.46 years</div>
         </div>
         <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
           <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Chubb</div>
@@ -46,12 +62,12 @@
         </div>
         <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
           <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">PolyU</div>
-          <div class="mt-1 text-xl font-semibold text-slate-900">1 yr 4 mo</div>
-          <div class="text-sm text-slate-600">May 2025 – Present · 16.4 mo</div>
+          <div id="exp-polyu-ym" class="mt-1 text-xl font-semibold text-slate-900">1 yr 5 mo</div>
+          <div id="exp-polyu-detail" class="text-sm text-slate-600">May 2025 – Present · 17.2 mo</div>
         </div>
       </div>
-      <div class="mt-4 overflow-x-auto">
-        <table class="min-w-full text-sm">
+      <div class="stack-wrap mt-4 overflow-x-auto">
+        <table class="stack-table min-w-full text-sm">
           <thead class="text-left text-slate-700 border-b border-slate-200">
             <tr>
               <th class="py-2 pr-4 font-semibold">Employer</th>
@@ -62,21 +78,21 @@
           </thead>
           <tbody class="divide-y divide-slate-100">
             <tr>
-              <td class="py-2 pr-4">Chubb Hong Kong Limited</td>
-              <td class="py-2 pr-4">Assistant Engineer (Fire Service)</td>
-              <td class="py-2 pr-4 whitespace-nowrap">2024-05-13 – 2025-05-23</td>
-              <td class="py-2">1y 0m 11d (376 days)</td>
+              <td class="py-2 pr-4" data-label="Employer">Chubb Hong Kong Limited</td>
+              <td class="py-2 pr-4" data-label="Role">Assistant Engineer (Fire Service)</td>
+              <td class="py-2 pr-4 whitespace-nowrap" data-label="Period">2024-05-13 – 2025-05-23</td>
+              <td class="py-2" data-label="Duration">1y 0m 11d (376 days)</td>
             </tr>
             <tr>
-              <td class="py-2 pr-4">The Hong Kong Polytechnic University (PolyU)</td>
-              <td class="py-2 pr-4">Assistant Facilities Officer (Fire Services)</td>
-              <td class="py-2 pr-4 whitespace-nowrap">2025-05-26 – 2026-10-07 (Present)</td>
-              <td class="py-2">1y 4m 12d (500 days)</td>
+              <td class="py-2 pr-4" data-label="Employer">The Hong Kong Polytechnic University (PolyU)</td>
+              <td class="py-2 pr-4" data-label="Role">Assistant Facilities Officer (Fire Services)</td>
+              <td id="exp-polyu-period" class="py-2 pr-4 whitespace-nowrap" data-label="Period">2025-05-26 – 2026-10-30 (Present)</td>
+              <td id="exp-polyu-dur" class="py-2" data-label="Duration">1y 5m 5d (523 days)</td>
             </tr>
             <tr class="font-medium">
-              <td class="py-2 pr-4" colspan="2">Total employed (excl. weekend gap)</td>
-              <td class="py-2 pr-4 whitespace-nowrap">2024-05-13 → Present</td>
-              <td class="py-2">2y 4m 23d (876 days)</td>
+              <td class="py-2 pr-4" colspan="2" data-label="Total">Total employed (excl. weekend gap)</td>
+              <td class="py-2 pr-4 whitespace-nowrap" data-label="Period">2024-05-13 → Present</td>
+              <td id="exp-total-dur" class="py-2" data-label="Duration">2y 5m 16d (899 days)</td>
             </tr>
           </tbody>
         </table>
@@ -84,13 +100,13 @@
       <p class="mt-3 text-xs text-slate-500">
         Formula: day-inclusive span with <code>relativedelta</code> (end+1day − start).
         Chubb ended Fri 23 May 2025 (per letter); PolyU started Mon 26 May 2025 — only Sat–Sun 24–25 May 2025 weekend gap (non-working), not counted in employed total.
-        Month totals use average month length 30.436875 days (365.25/12). Calculation date: 2026-10-07 HKT.
+        Month totals use average month length 30.436875 days (365.25/12). Calculation date: <span id="exp-calc-date">2026-10-30 HKT</span>. In a browser, Present is today in Hong Kong, so the PolyU and total figures stay current.
       </p>
     </section>
 
     <h2 class="text-lg font-semibold text-slate-900 mb-3">Stored reference letters</h2>
-    <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-      <table class="min-w-full text-sm">
+    <div class="stack-wrap overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+      <table class="stack-table min-w-full text-sm">
         <thead class="bg-slate-100 text-left text-slate-700">
           <tr>
             <th class="px-4 py-3 font-semibold">Date</th>
@@ -103,12 +119,12 @@
         </thead>
         <tbody class="divide-y divide-slate-100">
           <tr>
-            <td class="px-4 py-3 whitespace-nowrap">2025-05-23</td>
-            <td class="px-4 py-3">Chubb Hong Kong Limited</td>
-            <td class="px-4 py-3">Tammy Chu, Manager</td>
-            <td class="px-4 py-3">Assistant Engineer (Fire Service)</td>
-            <td class="px-4 py-3 whitespace-nowrap">13 May 2024 – 23 May 2025</td>
-            <td class="px-4 py-3 space-x-2 whitespace-nowrap">
+            <td class="px-4 py-3 whitespace-nowrap" data-label="Date">2025-05-23</td>
+            <td class="px-4 py-3" data-label="Employer">Chubb Hong Kong Limited</td>
+            <td class="px-4 py-3" data-label="Referee">Tammy Chu, Manager</td>
+            <td class="px-4 py-3" data-label="Role covered">Assistant Engineer (Fire Service)</td>
+            <td class="px-4 py-3 whitespace-nowrap" data-label="Period covered">13 May 2024 – 23 May 2025</td>
+            <td class="px-4 py-3 space-x-2 whitespace-nowrap" data-label="Evidence">
               <a class="text-blue-700 underline font-medium" href="./reference-letters/2025-05-23_Chubb_Reference-Letter_Chu-Hiu-Lung.pdf" target="_blank" rel="noopener">Open PDF</a>
               <span class="text-slate-400">·</span>
               <a class="text-slate-600 underline" href="https://drive.google.com/file/d/1RW3C6dEJxXolI0PVTGyQe5Eukf_g7Fj8/view" target="_blank" rel="noopener">Drive</a>
@@ -121,5 +137,6 @@
     <p class="mt-6 text-sm text-slate-500">Letter PDFs are stored on this site under <code>reference-letters/</code> and mirrored in Google Drive. Experience totals use exact letter/handover dates (Chubb to 23 May 2025; PolyU from 26 May 2025). CV shows month-year: Chubb May 2024 – May 2025; PolyU May 2025 – Present.</p>
     <p class="mt-2"><a class="text-blue-700 underline" href="./cv.html">Open CV</a> · <a class="text-blue-700 underline" href="./cpd-log.html">CPD Log Book</a></p>
   </div>
+  <script src="./site.js"></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+/* Narrow screens: turn wide log tables into labelled blocks so hours and proof links stay on screen. */
+@media screen and (max-width: 720px) {
+  .stack-wrap { overflow: visible; }
+  table.stack-table { min-width: 0; }
+  table.stack-table thead { display: none; }
+  table.stack-table,
+  table.stack-table tbody,
+  table.stack-table tr,
+  table.stack-table td {
+    display: block;
+    width: auto;
+  }
+  table.stack-table tr { padding: 0.85rem 1rem; }
+  table.stack-table td {
+    padding: 0.2rem 0;
+    white-space: normal !important;
+  }
+  table.stack-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.1rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+}
